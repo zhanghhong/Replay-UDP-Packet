@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PARA>
+    <SRC ip="127.0.0.1" port="6666" desc="本地地址"/>
+	<DST ip="127.0.0.1" port="6001" desc="目的地址"/>
+    <PATH var="./data/data-20250919161613.dat" desc="回放文件路径"/>
+</PARA>

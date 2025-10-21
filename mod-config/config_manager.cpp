@@ -1,5 +1,5 @@
 #include "config_manager.h"
-#include "mod-ose/tinyXML/tinyxml2.h"
+#include "../mod-ose/tinyXML/tinyxml2.h"
 
 ConfigManager* ConfigManager::singleton = nullptr;
 
@@ -23,7 +23,7 @@ ConfigManager* ConfigManager::instance()
 int ConfigManager::loadConfig()
 {
     tinyxml2::XMLDocument doc;
-    tinyxml2::XMLError error = doc.LoadFile("./config/comm_conf.xml");
+    tinyxml2::XMLError error = doc.LoadFile("../config/comm_conf.xml");
     if(error != tinyxml2::XML_SUCCESS)
         return 1;
 

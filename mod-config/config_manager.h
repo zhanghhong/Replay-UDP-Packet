@@ -1,6 +1,6 @@
 #ifndef CONFIGMANAGER_H
 #define CONFIGMANAGER_H
-#include "mod-interface/inner_struct.h"
+#include "../mod-interface/inner_struct.h"
 
 class ConfigManager
 {

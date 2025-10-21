@@ -3,5 +3,5 @@
 <PARA>
     <SRC ip="127.0.0.1" port="6666" desc="本地地址"/>
 	<DST ip="127.0.0.1" port="6001" desc="目的地址"/>
-    <PATH var="./data/data-20250919161613.dat" desc="回放文件路径"/>
+    <PATH var="C:\Users\haihong\Desktop\Codes\_Network\Replay-UDP-Packet\data\data-20250917194825.dat" desc="回放文件路径"/>
 </PARA>

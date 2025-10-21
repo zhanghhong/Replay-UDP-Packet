@@ -1,5 +1,6 @@
 #ifndef UDPSENDER_H
 #define UDPSENDER_H
+
 #include <string>
 #ifdef _WIN32
 #include <winsock2.h>
@@ -20,12 +21,10 @@ public:
     UdpSender();
     ~UdpSender();
 
-    // 初始化UDP套接字
     bool Init();
-    // 停止发送
     bool stop();
-    // 发送循环
     void Send(const char* packet, int packet_size);
+
 private:
     std::string m_destIP;
     int m_destPort;

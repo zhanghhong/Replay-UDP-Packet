@@ -43,7 +43,7 @@ private:
 
     // 线程相关
     std::thread m_thread;                       // 线程
-    std::atomic<bool> m_running = false;        // 运行状态标志
+    std::atomic<bool> m_running{false};        // 运行状态标志
     std::mutex m_mutex;                         // 互斥锁
 };
 

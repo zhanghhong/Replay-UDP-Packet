@@ -1,4 +1,3 @@
-#include <QCoreApplication>
 #include "udp_sender.h"
 #include "offline_udp_reader.h"
 #include "mod-ose/ose_time_sys.h"
@@ -6,8 +5,6 @@
 
 int main(int argc, char *argv[])
 {
-    QCoreApplication a(argc, argv);
-
     auto config = ConfigManager::instance();
 
     UdpSender* udpSender = new UdpSender();
@@ -15,9 +12,6 @@ int main(int argc, char *argv[])
 
     OfflineUdpReader our;
     our.init(config->getConfig().path);
-
-    offline_udp_info_t t = our.ReadFileInfo();
-    printf("ReadFileInfo: %f %f %f\n", t.start_time, t.end_time, t.packet_total_count);
 
     our.start();
 
@@ -37,7 +31,6 @@ int main(int argc, char *argv[])
             {
                 if(OSE_TIME_SYS::GetUTCTime() > t.RecvTime)
                 {
-                    printf("%d\n",t.count);
                     udpSender->Send(t.data.data(), t.length);
                     break;
                 }
@@ -46,5 +39,5 @@ int main(int argc, char *argv[])
         else
             have_data = false;
     }
-    return a.exec();
+    return 0;
 }
